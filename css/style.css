@@ -1,2 +1,153 @@
 @import url(variables.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr) 3fr;
+    grid-template-rows: repeat(5, 1fr) .5fr;
+    grid-template-areas:
+    ". . . logo"
+    "titulo titulo titulo logo"
+    "titulo titulo titulo logo"
+    "parrafo parrafo parrafo logo"
+    "boton . . logo"
+    "caja1 caja2 caja3 ."
+    ;
+}
+.banner{
+    background: var(--color-primary);
+    position: absolute;
+    height: 85vh;
+    width: 100%;
+    z-index: -5; 
+}
+.item1{
+    margin-left: 25px;
+  /*/  background: red;/*/
+    grid-area: titulo;
+}
+.item1 h1{
+    font-size: 7.5em;
+    line-height: 1;
+    font-weight: normal;
+    color: var(--color-ternary);
+}
 
+.item2{
+   /*/ background: blue;/*/
+    grid-area: logo;
+}
+.item2 img{
+    width: 100%;
+    height: 110%;
+    object-fit: contain;
+}
+.item3{
+    margin-left: 25px;
+    /*/background: green;/*/
+    grid-area: parrafo;
+    display: flex;
+    align-items: center;
+}
+.item3 p{
+    width: 90%;
+    height: 60px;
+    color: var(--color-ternary);
+    /*/background: #e100ff;/*/
+}
+
+.item4{
+    margin-left: 25px;
+    /*/background: yellow;/*/
+    grid-area: boton;
+}
+.item4 button{
+    border: none;
+    background: var(--color-button);
+    border-radius: 20px;
+    padding: 12px;
+    color: var(--color-ternary);
+}
+
+.item5, .item6, .item7{
+    position: relative;
+    top: -45px;
+    display: flex;
+    justify-content: center;
+}
+
+.item5{
+    /*/background: purple;/*/
+    grid-area: caja1;
+}
+.card{
+    width: 150px;
+    height: 115px;
+    background: var(--color-card);
+    overflow: hidden;
+    display: flex;
+    padding: 5px 16px;
+    flex-direction: column;
+    border-radius: 10px;
+}
+.card img{
+    width: 25px;
+    height: 25px;
+    object-fit: contain;
+}
+.card h3{
+    font-size: 1.2rem;
+    margin: 5px 0;
+}
+.card p{
+    font-size: 0.5rem;
+    height: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.item6{
+    /*/background: pink;/*/
+    grid-area: caja2;
+}
+.item7{
+    /*/background: orange;/*/
+    grid-area: caja3;
+}
+@media (width <= 700px){
+    body{
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(7, 1fr);
+        grid-template-areas:
+        "titulo titulo titulo"
+        "logo logo logo"
+        "logo logo logo"
+        "logo logo logo"
+        "parrafo parrafo parrafo"
+        ". boton ."
+        "caja1 caja2 caja3"
+        ;
+    }
+    .item1 h1{
+        font-size: 4rem;
+        text-align: center;
+    }
+    .item2 img{
+        width: 100%;
+    }
+    item3 p{
+        width: 100%;
+    }
+    .item1, .item3, .item4{
+        margin: 0;
+    }
+    .item5, .item6, .item7{
+        top: -20px;
+    }
+}
