@@ -1,2 +1,97 @@
 @import url(variables.css);
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.container{
+    display: grid;
+    column-gap: 8px;
+    row-gap: 12px;
+    grid-template-columns: repeat(7,1fr);
+    grid-template-rows: repeat(4,1fr);
+    grid-template-areas: 
+    "text text text img1 img2 img3 img4"
+    "text text text img5 img6 img7 img8"
+    "text text text img9 img10 img11 img12"
+    "text text text img13 img14 img15 img16"
+    ;
+    height: 80vh;
+    width: 80vw;
 
+}
+.item_1{
+    background: blueviolet;
+    grid-area: text;
+}
+.item_2{
+    background: red;
+    grid-area: img1;
+}
+.item_3{
+    background: green;
+    grid-area: img2;
+}
+.item_4{
+    background: yellow;
+    grid-area: img3;
+}
+.item_5{
+    background: blue;
+    grid-area: img4;
+}
+.item_6{
+    background: purple;
+    grid-area: img5;
+}
+.item_7{
+    background: pink;
+    grid-area: img6;
+}
+.item_8{
+    background: orange;
+    grid-area: img7;
+}
+.item_9{
+    background: gray;
+    grid-area: img8;
+}
+.item_10{
+    background: white;
+    grid-area: img9;
+}
+.item_11{
+    background: black;
+    grid-area: img10;
+}
+.item_12{
+    background: white;
+    grid-area: img11;
+}
+.item_13{
+    background: black;
+    grid-area: img12;
+}
+.item_14{
+    background: white;
+    grid-area: img13;
+}
+.item_15{
+    background: black;
+    grid-area: img14;
+}
+.item_16{
+    background: white;
+    grid-area: img15;
+}
+.item_17{
+    background: black;
+    grid-area: img16;
+}
