@@ -1,3 +1,14 @@
 :root{
     --color-primary: #2F2F2F;
+    --color-secundary: #6BDFDA;
+    --color-tertiary: #9ad7f3;
+    --color-quaternary: #fec3c7;
+}
+@font-face {
+    font-family: "Poppins-bold";
+    src: url(../storage/fonts/Poppins/Poppins-Bold.ttf);
+}
+@font-face {
+    font-family: "Poppins-regular";
+    src: url(../storage/fonts/Poppins/Poppins-Regular.ttf);
 }
