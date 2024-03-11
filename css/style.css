@@ -1,2 +1,30 @@
 @import url(variables.css);
-
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background: var(--background);
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 2fr 1fr;
+    grid-template-areas: 
+    "text image"
+    "cards cards";
+}
+.item_1{
+    background: red;
+    grid-area: text;
+}
+.item_2{
+    background: blue;
+    grid-area: image;
+}
+.item_3{
+    background: green;
+    grid-area: cards;
+}
